@@ -13,6 +13,10 @@
     <%= coupon_description(coupon) %>
   </td>
 
+  <td>
+    <%= coupon.user.try(:username) %>
+  </td>
+
   <td class="text-center">
     <%= redeemed(coupon) %>
   </td>

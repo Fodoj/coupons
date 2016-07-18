@@ -10,6 +10,7 @@ class SetupCoupons < ActiveRecord::Migration
       t.integer :amount, null: false, default: 0
       t.string :type, null: false
       t.timestamps null: false
+      t.integer :user_id, default: nil
 
       case ActiveRecord::Base.connection.adapter_name
       when 'Mysql2'

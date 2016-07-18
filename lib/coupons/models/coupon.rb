@@ -57,6 +57,10 @@ module Coupons
         coupon_redemptions_count
       end
 
+      def for_mentor?(mentor_id)
+        user_id.nil? || user_id == mentor_id
+      end
+
       def expired?
         valid_until && valid_until <= Date.current
       end

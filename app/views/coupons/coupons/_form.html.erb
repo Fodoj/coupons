@@ -27,6 +27,18 @@
 
   <div class="form-group">
     <div class="form-label">
+      <%= form.label :user_id %>
+      <%= form.hint  :user_id %>
+    </div>
+
+    <div class="form-control">
+      <%= form.select :user_id, User.mentors.map{ |c| [c.username, c.id] }, include_blank: true %>
+      <%= form.error_for :user_id %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-label">
       <%= form.label :redemption_limit %>
       <%= form.hint  :redemption_limit %>
     </div>
