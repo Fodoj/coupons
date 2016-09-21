@@ -62,6 +62,7 @@ ru:
       discount: 'Discount'
       redeemed: 'Redeemed'
       expiration: 'Expiration'
+      mentor: 'Mentor'
 
     actions:
       edit: 'Edit'
@@ -93,6 +94,7 @@ ru:
         code: 'Discount Code'
         valid_from: 'Valid From'
         valid_until: 'Valid Until'
+        user_id: 'Mentor'
 
     hints:
       coupon:
@@ -103,6 +105,7 @@ ru:
         amount: 'This is the actual discount amount. 0-100 for percentage, zero or positive number for amount.'
         valid_from: 'When this coupon will be available.'
         valid_until: 'When will this coupon expire. By default, it does not expire.'
+        user_id: 'Choose mentor for this coupon.'
 
     form_error_description: 'You must double check the form:'
 
