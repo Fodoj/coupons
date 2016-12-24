@@ -11,17 +11,12 @@ module Coupons
       after_initialize do
         self.code ||= Coupons.configuration.generator.call
         self.valid_from ||= Date.current
-
-        attachments_will_change!
-        write_attribute :attachments, {} if attachments.empty?
       end
 
       has_many :redemptions, class_name: 'Coupons::Models::CouponRedemption'
 
       validates_presence_of :code, :valid_from
       validates_inclusion_of :type, in: %w[percentage amount]
-
-      serialize :attachments, GlobalidSerializer
 
       validates_numericality_of :amount,
         greater_than_or_equal_to: 0,

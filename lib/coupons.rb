@@ -5,7 +5,6 @@ module Coupons
   require 'coupons/generator'
   require 'coupons/helpers'
   require 'coupons/collection'
-  require 'coupons/globalid_serializer'
   require 'coupons/resolver'
   require 'coupons/models/coupon'
   require 'coupons/models/coupon_redemption'
